@@ -9,9 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.47"
+    "axios": "^1.3.5",
+    "konva": "^8.4.3",
+    "vue": "^3.2.47",
+    "vue-konva": "^3.0.2",
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@types/node": "^18.15.11",
     "@vitejs/plugin-vue": "^4.1.0",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
