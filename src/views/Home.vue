@@ -10,9 +10,22 @@ const addLabel = (label: any) => {
 </script>
 
 <template>
-    <Stage :width="1000" :height="600" @polygonclick="addLabel" :labels="labels" />
-    <ToolBox :width="600" :height="12" />
-    <Label :labels="labels" />
+    <div class="container">
+        <div>
+            <Stage :width="1000" :height="600" @polygonclick="addLabel" :labels="labels" />
+        </div>
+        <div>
+            <ToolBox :width="600" :height="12" />
+            <Label :labels="labels"  />
+        </div>
+
+    </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+}
+</style>
