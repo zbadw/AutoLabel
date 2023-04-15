@@ -22,6 +22,7 @@ const labels = ref([]);
 const addLabel = (label: any) => {
     // labels.value.push(label);
 };
+
 let image = ref<HTMLImageElement | null>(null);
 const upload = () => {
     const file = document.getElementById("file") as HTMLInputElement;
