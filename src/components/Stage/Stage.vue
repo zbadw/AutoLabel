@@ -11,7 +11,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import { randomInt } from "crypto";
 import { onMounted, ref, watch } from "vue";
 const props = defineProps<{ width: number; height: number; image: HTMLImageElement | null; labels: any }>();
 let hoverTimer: any = null;

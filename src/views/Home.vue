@@ -4,10 +4,10 @@
             <div id="upload">
                 <input type="file" id="file" accept="image/*" @change="upload" />
             </div>
-            <Stage :width="1000" :height="600" @polygonclick="addLabel" :labels="labels" :image="image" />
+            <Stage :width="1000" :height="600" @polygonCLick="addLabel" :labels="labels" :image="image" />
         </div>
         <div>
-            <ToolBox :width="600" :height="12" />
+            <ToolBox :width="600" :height="12" @stateClick="stateChange"/>
             <Label :labels="labels" />
         </div>
 
@@ -24,6 +24,9 @@ const addLabel = (label: any) => {
 };
 
 let image = ref<HTMLImageElement | null>(null);
+// enum
+const label_states = ["none","polygon", "rectangle", "auto"];
+const label_state = ref('none');
 const upload = () => {
     const file = document.getElementById("file") as HTMLInputElement;
     const fileObj = file.files?.[0] as Blob;
@@ -37,6 +40,9 @@ const upload = () => {
             image.value = tempImage;
         };
     };
+};
+const stateChange = (state:string) => {
+    label_state.value = state.toLowerCase();
 };
 </script>
 
